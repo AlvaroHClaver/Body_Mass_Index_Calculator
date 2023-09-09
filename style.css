@@ -1,0 +1,602 @@
+:root {
+  --gunmetal: #253347;
+  --Dark-Electric-Blue: #5e6e85;
+  --Pure-White: #fff;
+  --blue: #345ff6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter;
+  background: var(--Pure-White);
+}
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ------ Header ----- */
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  height: 640px;
+  border-radius: 0px 0px 35px 35px;
+  background: linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%);
+}
+header img {
+  aspect-ratio: 1/1;
+  width: 40px;
+  margin-top: 32px;
+}
+header h1 {
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2.4px;
+  width: 80%;
+  color: var(--gunmetal);
+}
+header div {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 80%;
+  color: var(--Dark-Electric-Blue);
+}
+/* ----- Inputs e Radios ------ */
+.calculator {
+  position: relative;
+  top: -150px;
+  width: 328px;
+  height: 649px;
+  border-radius: 16px;
+  background: var(--Pure-White);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-direction: column;
+  padding: 24px;
+}
+#calculatorTitle {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--gunmetal);
+  width: 100%;
+}
+.radioGroup {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.radioTxt {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--gunmetal);
+}
+
+.inputGroup {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.box2 {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+  border-radius: 12px;
+  border: 1px solid #d8e2e7;
+}
+.box2 input {
+  height: 69px;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  width: 80%;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--gunmetal);
+  padding: 20px;
+  border: transparent;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.box2 div {
+  height: 69px;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--blue);
+}
+label {
+  color: #5e6e85;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.box3 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blueCard {
+  width: 100%;
+  color: var(--Pure-White);
+  height: 257px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+}
+
+#blueTitle {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+#bmi {
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2.4px;
+}
+#blueTxt {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+#blueTxt span {
+  font-weight: bold;
+}
+
+/* ------BMI Result ----- */
+
+.bmiResult {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.bmiResult h2 {
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 35.2px */
+  letter-spacing: -1.6px;
+  color: var(--gunmetal);
+  padding: 0px 24px 0 24px;
+}
+.bmiResult p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--Dark-Electric-Blue);
+  padding: 0px 24px 0 24px;
+}
+.bmiResultTxtContainter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#image-man-eating {
+  width: 100%;
+  height: 354px;
+  padding: 0px;
+}
+
+/* ----- Health Habits ----- */
+.healthHabits {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 100px;
+  align-items: center;
+}
+.healthContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.healthHabistTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.healthContainer img {
+  aspect-ratio: 1/1;
+  width: 64px;
+}
+.healthContainer p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--Dark-Electric-Blue);
+}
+
+/* ----- Limitations BMI ----- */
+.alternativeLimitations {
+  display: none;
+}
+
+.limitationsBmi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.limitationsHeader {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.limitationsHeader h2 {
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  color: var(--gunmetal);
+  letter-spacing: -1.6px;
+}
+.limitationsHeader p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--Dark-Electric-Blue);
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.limitationCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 350px;
+  height: 216px;
+  background: var(--Pure-White);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  border-radius: 16px;
+  padding: 10px;
+}
+.cardTitle {
+  display: flex;
+  align-items: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+  gap: 7px;
+}
+.cardTitle img {
+  aspect-ratio: 1/1;
+  width: 32px;
+}
+.cardTxt {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--Dark-Electric-Blue);
+}
+
+/* ----- Media Querie Tablet ----- */
+
+@media (min-width: 700px) {
+  /* -----Inputs e Radios ----- */
+  .calculator {
+    top: -350px;
+    width: 686px;
+    height: 467px;
+  }
+
+  .radioGroup {
+    width: 70%;
+    align-self: flex-start;
+  }
+  .box {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .inputGroup {
+    flex-direction: row;
+  }
+
+  .blueCard {
+    height: 149px;
+    border-radius: 16px 999px 999px 16px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #bmi {
+    width: 267px;
+  }
+
+  /* ------BMI Result ----- */
+
+  .bmiResult {
+    position: relative;
+    top: -250px;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  .bmiResultTxtContainter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #image-man-eating {
+    width: 360px;
+    height: 411px;
+  }
+
+  /* ----- Health Habits ----- */
+  .healthHabits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    top: -200px;
+    align-items: center;
+  }
+
+  .healthContainer {
+    width: 90%;
+    flex-direction: row;
+  }
+
+  /* ----- Limitations BMI ----- */
+
+  .limitationsBmi {
+    margin-top: 0;
+  }
+
+  .cardContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .limitationCard {
+    width: 335px;
+    height: 232px;
+  }
+}
+
+/* ----- Media Querie Desktop ----- */
+
+@media (min-width: 1030px) {
+  .topContainer {
+    flex-direction: row;
+  }
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 70%;
+    height: 600px;
+    border-radius: 0px 0px 35px 35px;
+    background: linear-gradient(
+      290deg,
+      #d6e6fe 0%,
+      rgba(214, 252, 254, 0) 100%
+    );
+  }
+  header img {
+    aspect-ratio: 1/1;
+    width: 40px;
+    margin-top: 32px;
+    margin-left: 80px;
+  }
+  header h1 {
+    text-align: left;
+    margin-left: 80px;
+    width: 45%;
+  }
+  header div {
+    text-align: left;
+    margin-left: 80px;
+    width: 60%;
+  }
+  /* -----Inputs e Radios ----- */
+  .calculator {
+    top: 20px;
+    left: -200px;
+  }
+
+  /* ------BMI Result ----- */
+
+  .bmiResult {
+    top: 80px;
+    align-items: center;
+    width: 90%;
+  }
+
+  .bmiResult h2 {
+    font-size: 48px;
+    width: 80%;
+  }
+  .bmiResult p {
+    width: 500px;
+  }
+  #image-man-eating {
+    width: 546px;
+    height: 533px;
+  }
+
+  /* ----- Health Habits ----- */
+  .healthHabits {
+    padding: 80px 0px 0px 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: relative;
+    top: 0px;
+    align-items: center;
+    justify-content: space-evenlyss;
+    width: 95%;
+  }
+
+  .healthContainer {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  /* ----- Limitations BMI ----- */
+
+  .limitationsBmi {
+    display: none;
+  }
+  /* ---- Alternative BMI ----- */
+  .alternativeLimitations {
+    padding: 100px 0px 0px 80px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+  .topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+  }
+  #topConatinerText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #topConatinerText h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 52.8px */
+    letter-spacing: -2.4px;
+    color: var(--gunmetal);
+  }
+  #topConatinerText p {
+    width: 90%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--Dark-Electric-Blue);
+  }
+  .middleContainer {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    gap: 25px;
+  }
+  .bottomContainer {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ----- Bloqueio para monitores ultrawide ou maiores que 1440px ----- */
+@media (min-width: 1445px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
