@@ -59,7 +59,8 @@ header div {
   color: var(--Dark-Electric-Blue);
 }
 /* ----- Inputs e Radios ------ */
-.calculator {
+.calculatorMetric,
+.calculatorImperial {
   position: relative;
   top: -150px;
   width: 328px;
@@ -104,8 +105,8 @@ header div {
   color: var(--gunmetal);
 }
 
-.inputGroup {
-  /* border: 1px solid red; */
+.inputGroupMetric,
+.inputGroupImperial {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -114,7 +115,6 @@ header div {
 .box2 {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid blue; */
   border-radius: 12px;
   border: 1px solid #d8e2e7;
 }
@@ -168,6 +168,10 @@ label {
   gap: 8px;
 }
 
+.box3OFF {
+  display: none;
+}
+
 .blueCard {
   width: 100%;
   color: var(--Pure-White);
@@ -183,6 +187,17 @@ label {
 #blueTitle {
   font-family: Inter;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+.welcomeText {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#welcome {
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
@@ -205,6 +220,56 @@ label {
 
 #blueTxt span {
   font-weight: bold;
+}
+.box4OFF {
+  display: none;
+}
+.box4 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputAreaImperial {
+  display: flex;
+  gap: 16px;
+}
+
+.unitContainerImperial {
+  width: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 12px;
+  border: 1px solid #d8e2e7;
+}
+.unit {
+  font-family: Inter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-style: normal;
+  margin-right: 10px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--blue);
+  height: 100%;
+}
+.inputAreaImperial input {
+  width: 75%;
+  height: 69px;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: var(--gunmetal);
+  padding: 20px;
+  border: transparent;
 }
 
 /* ------BMI Result ----- */
@@ -368,10 +433,15 @@ label {
 
 @media (min-width: 700px) {
   /* -----Inputs e Radios ----- */
-  .calculator {
+  .calculatorMetric {
     top: -350px;
     width: 686px;
     height: 467px;
+  }
+  .calculatorImperial {
+    top: -350px;
+    width: 686px;
+    height: 606px;
   }
 
   .radioGroup {
@@ -385,8 +455,11 @@ label {
     gap: 10px;
   }
 
-  .inputGroup {
+  .inputGroupMetric {
     flex-direction: row;
+  }
+  .inputGroupImperial {
+    flex-direction: column;
   }
 
   .blueCard {
@@ -395,9 +468,23 @@ label {
     flex-direction: row;
     align-items: center;
   }
-
+  #welcome {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+  .welcomeText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   #bmi {
     width: 267px;
+  }
+  .unitContainerImperial {
+    width: 299px;
   }
 
   /* ------BMI Result ----- */
@@ -455,7 +542,7 @@ label {
 
 /* ----- Media Querie Desktop ----- */
 
-@media (min-width: 1030px) {
+@media (min-width: 1250px) {
   .topContainer {
     flex-direction: row;
   }
@@ -492,7 +579,8 @@ label {
     width: 60%;
   }
   /* -----Inputs e Radios ----- */
-  .calculator {
+  .calculatorMetric,
+  .calculatorImperial {
     top: 20px;
     left: -200px;
   }

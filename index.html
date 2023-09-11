@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
       rel="stylesheet"
@@ -22,11 +23,11 @@
           your overall health and well-being.
         </div>
       </header>
-      <section class="calculator">
+      <section class="calculatorMetric" id="calculator">
         <div id="calculatorTitle">Enter your details below</div>
         <div class="radioGroup">
           <div class="box">
-            <div>
+            <div id="radioMetric" onclick="changeUnit('metric')">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -46,8 +47,8 @@
             </div>
             <div class="radioTxt">Metric</div>
           </div>
-          <div class="box">
-            <div>
+          <div class="box" >
+            <div id="radioImperial" onclick="changeUnit('imperial')">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -67,31 +68,63 @@
             <div class="radioTxt">Imperial</div>
           </div>
         </div>
-        <div class="inputGroup">
-          <div class="box3">
+        <div class="inputGroupMetric" id="inputGroup">
+          <div class="box3 bx3">
             <label for="height">Height</label>
             <div class="box2">
-              <input type="text" />
+              <input type="text" placeholder="0" />
               <div>cm</div>
             </div>
           </div>
-          <div class="box3">
+          <div class="box3 bx3">
             <label for="height">Weight</label>
             <div class="box2">
-              <input type="text" />
+              <input type="text" placeholder="0" />
               <div>kg</div>
             </div>
           </div>
+          <div class="box4OFF bx4">
+            <label for="">Height</label>
+            <div class="inputAreaImperial">
+              <div class="unitContainerImperial">
+                <input type="text" placeholder="0">
+                <div class="unit">ft</div>
+              </div>
+              <div class="unitContainerImperial">
+                <input type="text">
+                <div class="unit">in</div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="box4OFF bx4">
+            <label for="">Weight</label>
+            <div class="inputAreaImperial">
+              <div class="unitContainerImperial">
+                <input type="text" placeholder="0">
+                <div class="unit">st</div>
+              </div>
+              <div class="unitContainerImperial">
+                <input type="text">
+                <div class="unit">lbs</div>
+              </div>
+            </div>
+          </div>
+        
         </div>
         <div class="blueCard">
-          <div>
+         <div class="welcomeText">
+          <div id="welcome">Welcome!</div>
+          <div>Enter your height and weight and you’ll see your BMI result here</div>
+         </div>
+          <!-- <div>
             <div id="blueTitle">Your BMI is...</div>
             <div id="bmi">23.4</div>
           </div>
           <div id="blueTxt">
             Your BMI suggests you’re a healthy weight. Your ideal weight is
             between <span>63.3kgs - 85.2kgs</span>.
-          </div>
+          </div> -->
         </div>
       </section>
     </div>
